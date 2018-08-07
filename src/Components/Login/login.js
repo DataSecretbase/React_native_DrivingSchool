@@ -33,7 +33,7 @@ const ACCOUNT = 'my_id'
 export default class Login extends Component {
   constructor(props){
     super(props);
-  
+
     this.state = {
        username: '',
        password: '',
@@ -126,10 +126,10 @@ export default class Login extends Component {
                 <RkText rkType='awesome hero accentColor'>{FontAwesome.facebook}</RkText>
               </RkButton>
             </View> */}
-            <RkTextInput 
+            <RkTextInput
                 onChangeText={(username) => this.setState({"username": username})}
-                rkType='rounded' 
-                placeholder='Email or Username' 
+                rkType='rounded'
+                placeholder='邮箱或者用户名'
                 underlineColorAndroid="transparent"
                 autoCorrect={false}
                 autoCapitalize="none"
@@ -137,10 +137,10 @@ export default class Login extends Component {
                 blurOnSubmit={true}
                 keyboardType="email-address"
                 keyboardAppearance="default"/>
-            <RkTextInput 
+            <RkTextInput
                 onChangeText={(password) => this.setState({"password": password})}
-                rkType='rounded' 
-                placeholder='Password' 
+                rkType='rounded'
+                placeholder='密码'
                 underlineColorAndroid="transparent"
                 placeholderTextColor="white"
                 autoCorrect={false}

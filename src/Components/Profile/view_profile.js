@@ -100,9 +100,9 @@ export default class ViewProfile extends Component {
           alert(response._bodyText)
       }
      }else{
-       alert("Bizde geri vites yok :) ")
+       alert("你已经关注了 :) ")
      }
-    
+
   }
 
   async getInfo(){
@@ -157,18 +157,18 @@ export default class ViewProfile extends Component {
       <View style={{flex:2, margin:15, marginBottom:5, flexDirection:'row', justifyContent:'space-around'}}>
       <View style={{alignItems:"center", margin:15, justifyContent:'center'}}>
         <Text style={{fontWeight:'400', fontSize:18}}>{this.state.info.totalPosts}</Text>
-        <Text style={{color:"#888", fontSize:13}}>posts</Text>
+        <Text style={{color:"#888", fontSize:13}}>文章</Text>
       </View>
       <TouchableHighlight onPress={() => Actions.followers({'user_id': this.state.user_id})}>
         <View style={{alignItems:"center", margin:15, justifyContent:'center'}}>
           <Text style={{fontWeight:'400', fontSize:18}}>{this.state.info.followers}</Text>
-          <Text style={{color:"#888", fontSize:13}}>followers</Text>
+          <Text style={{color:"#888", fontSize:13}}>粉丝</Text>
         </View>
       </TouchableHighlight>
       <TouchableHighlight onPress={() => Actions.following({'user_id': this.state.user_id})}>
         <View style={{alignItems:"center", margin:15, justifyContent:'center'}}>
           <Text style={{fontWeight:'400', fontSize:18}}>{this.state.info.following}</Text>
-          <Text style={{color:"#888", fontSize:13}}>following</Text>
+          <Text style={{color:"#888", fontSize:13}}>关注</Text>
         </View>
       </TouchableHighlight>
 
@@ -206,9 +206,9 @@ export default class ViewProfile extends Component {
                   {
                       this.state.info.am_I_following
                           ?
-                            <Text style={{fontWeight:'600', color:'#333'}}>Following</Text>
+                            <Text style={{fontWeight:'600', color:'#333'}}>关注</Text>
                           :
-                            <Text style={{fontWeight:'600', color:'#fff'}}>Follow</Text>
+                            <Text style={{fontWeight:'600', color:'#fff'}}>关注</Text>
                   }
 
               </TouchableHighlight>
@@ -244,7 +244,7 @@ export default class ViewProfile extends Component {
                 {
                   x.isUpvotedMe
                       ?
-                        <Text> You have already upvoted! </Text>
+                        <Text> 你已经投票! </Text>
                       :
                       <Rating
                       type='custom'
@@ -306,7 +306,7 @@ export default class ViewProfile extends Component {
               <ActivityIndicator size="large" color="#0000ff" />
           :
               <View style={{flex:5}}>
-                
+
                   <ListView
                   enableEmptySections={true}
                   removeClippedSubviews={false}

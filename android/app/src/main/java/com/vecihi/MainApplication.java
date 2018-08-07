@@ -3,6 +3,8 @@ package com.vecihi;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.rnglmodelview.RNGLModelViewPackage;
+import com.microsoft.codepush.react.CodePush;
 import com.rnfs.RNFSPackage;
 import fr.bamlab.rnimageresizer.ImageResizerPackage;
 import com.imagepicker.ImagePickerPackage;
@@ -20,6 +22,12 @@ import java.util.List;
 public class MainApplication extends Application implements ReactApplication {
 
   private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
+
+        @Override
+        protected String getJSBundleFile() {
+        return CodePush.getJSBundleFile();
+        }
+
     @Override
     public boolean getUseDeveloperSupport() {
       return BuildConfig.DEBUG;
@@ -29,6 +37,8 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new RNGLModelViewPackage(),
+            new CodePush(getResources().getString(R.string.reactNativeCodePush_androidDeploymentKey), getApplicationContext(), BuildConfig.DEBUG),
             new RNFSPackage(),
             new ImageResizerPackage(),
             new ImagePickerPackage(),
@@ -44,7 +54,7 @@ public class MainApplication extends Application implements ReactApplication {
     }
   };
 
-  @Override
+ @Override
   public ReactNativeHost getReactNativeHost() {
     return mReactNativeHost;
   }

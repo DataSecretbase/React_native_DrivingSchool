@@ -34,8 +34,9 @@ import EditProfile from './Components/Profile/edit_profile'
 import Discover from './Components/Discover/discover'
 import Detail from './Components/Detail/detail'
 import SearchResult from './Components/Discover/search_result'
+import Multiple from './Components/Camera/Animated'
 
-  
+
 global.tracker = new GoogleAnalyticsTracker("UA-116148106-1");
 
 
@@ -89,39 +90,39 @@ export default class Index extends Component{
    render(){
       return(
          <Router>
-            <Scene key='root'> 
-            
+            <Scene key='root'>
+
             <Scene key='splash' initial={true} component={Splash}  title='splash'   hideNavBar={true}/>
-            <Scene key='login' component={Login}  title='login'   hideNavBar={true}/>
-            <Scene key='signUp' component={SignUp}  title='signUp'   hideNavBar={true}/>
+            <Scene key='login' component={Login}  title='登录'   hideNavBar={true}/>
+            <Scene key='signUp' component={SignUp}  title='注册'   hideNavBar={true}/>
 
             <Scene key='detail' component={Detail} hideNavBar={true} title='Detail'/>
 
             <Scene key="tabbar" tabs={true} tabBarStyle={{backgroundColor:'#fff'}} tabBarPosition='bottom'>
-                <Scene key="home" hideNavBar={true}  icon={HomeIcon}>
+                <Scene key="home" ideNavBar={true} title="首页" icon={HomeIcon}>
                     <Scene key="feed" initial={true} component={Home} />
                 </Scene>
-
-                <Scene key="discover" hideNavBar={true}  icon={DiscoverIcon} >
+                <Scene key="discover" hideNavBar={true} title="发现"  icon={DiscoverIcon} >
                     <Scene key="bests" initial={true} component={Discover} />
                     <Scene key="search_result" component={SearchResult} />
                 </Scene>
-                <Scene key="camera" hideNavBar={true} hideTabBar={true} icon={CameraIcon}>
-                    <Scene key="take" initial={true} component={CameraApp} />
-                    <Scene key='preview' component={Preview} title='Preview' hideTabBar={true}/>
-                    <Scene key='edit' component={Edit} title='Edit' hideTabBar={true}/>
+                <Scene key="camera" hideNavBar={true} title='相机' hideTabBar={true} icon={CameraIcon}>
+                    <Scene key="multiple" initial={true} component={Multiple} />
+                    <Scene key="take" component={CameraApp} />
+                    <Scene key='preview' component={Preview} title='预览' hideTabBar={true}/>
+                    <Scene key='edit' component={Edit} title='编辑' hideTabBar={true}/>
                 </Scene>
 
-                <Scene key="your stalkers"  hideNavBar={true}  icon={StalkerIcon} >
-                    <Scene key="who_viewed" initial={true} component={WhoViewedMyProfile} />
+                <Scene key="your stalkers"  hideNavBar={true} title='访客信息' icon={StalkerIcon} >
+                    <Scene key="who_viewed" component={WhoViewedMyProfile} />
                 </Scene>
 
-                <Scene key="profile" hideNavBar={true} icon={ProfileIcon}>
+                <Scene key="profile" hideNavBar={true} title='个人资料' icon={ProfileIcon}>
                     <Scene key="profile" initial={true} component={Profile}/>
-                    <Scene key="edit_profile" component={EditProfile} title="Edit Profile" hideTabBar={true} hideNavBar={true}/>
-                    <Scene key="view_profile" component={ViewProfile} title="View Profile" />
-                    <Scene key="followers" component={Followers} title="Followers" hideTabBar={true} hideNavBar={true}/>
-                    <Scene key="following" component={Following} title="Following" hideTabBar={true} hideNavBar={true}/>
+                    <Scene key="edit_profile" component={EditProfile} title="编辑个人资料" hideTabBar={true} hideNavBar={true}/>
+                    <Scene key="view_profile" component={ViewProfile} title="查看个人资料" />
+                    <Scene key="followers" component={Followers} title="粉丝" hideTabBar={true} hideNavBar={true}/>
+                    <Scene key="following" component={Following} title="关注" hideTabBar={true} hideNavBar={true}/>
                 </Scene>
 
             </Scene>

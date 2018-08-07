@@ -8,8 +8,8 @@ import {
    Image,
    AsyncStorage,
    Dimensions,
-   AppState, 
-   Alert 
+   AppState,
+   Alert
 } from 'react-native';
 
 import {Actions} from 'react-native-router-flux';
@@ -26,7 +26,7 @@ export default class Splash extends Component{
     global.tracker.trackScreenView("Splash")
     AsyncStorage.getItem(ACCESS_TOKEN).then((TOKEN) => {
       if(TOKEN){
-          setTimeout(() => Actions.tabbar(), 2000)
+          setTimeout(() => Actions.tabbar(), 1000)
       }else {
         setTimeout(() => Actions.signUp(), 2000)
       }
@@ -38,7 +38,7 @@ export default class Splash extends Component{
       return(
         <View style={styles.container}>
            <View style={styles.imageBox}>
-              <Image source={require('./images/vecihi.jpg')} style={{width:width, height:height}} resizeMode="cover"/>
+              <Image source={require('./images/vecihi.png')} style={{width:width, height:height}} resizeMode="cover"/>
            </View>
         </View>
       );

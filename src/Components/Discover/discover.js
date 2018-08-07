@@ -38,7 +38,7 @@ var blueI = "rgba(0,185,242,1)"
 
 
 export default class Discover extends Component {
-  
+
     constructor (props) {
         super(props);
         this.state = {
@@ -77,12 +77,12 @@ export default class Discover extends Component {
                 this.setState({loading: false})
             })
       }
-    
+
       componentWillMount(){
          this.getToken()
          global.tracker.trackScreenView("Discover")
       }
-    
+
       getToken(){
               AsyncStorage.getItem(ACCESS_TOKEN).then((access_token) => {
                 this.setState({
@@ -109,7 +109,7 @@ export default class Discover extends Component {
       iconColorX = "#fff"
       locationColorX = "#fff"
     }
-  
+
     return(
       <TouchableHighlight onPress={() => Actions.detail({'post': x})} style={{flex:1, width:width, height:height}}>
         <ImageBackground source={{uri: x.image}} resizeMode='cover' style={{position:"absolute", height:height/1.2, width:width-10, alignItems:'flex-end'}}>
@@ -127,18 +127,18 @@ export default class Discover extends Component {
 
       </TouchableHighlight>
       )
-  }  
-  
+  }
+
   nav(){
       return(
-          <View style={{height:50, paddingBottom:10}}> 
+          <View style={{height:50, paddingBottom:10}}>
                 <SearchBar
                 lightTheme
                 autoCapitalize='none'
                 onChangeText={(value) => this.setState({search_query: value})}
                 onSubmitEditing={() => Actions.search_result({"search_query": this.state.search_query})}
                 icon={{ type: 'font-awesome', name: 'search' }}
-                placeholder='Search a user, major etc ...' />
+                placeholder='搜索用户，资讯，驾校...' />
           </View>
       )
   }
@@ -155,27 +155,27 @@ export default class Discover extends Component {
 
   render() {
     return (
-      <View style={{flex:1}}> 
+      <View style={{flex:1}}>
         {this.nav()}
         <ScrollView enableEmptySections={true}>
-          <ListView 
+          <ListView
               removeClippedSubviews={false}
                 enableEmptySections={true}
-                horizontal={true} 
-                dataSource={this.state.bestOfMarmara} 
+                horizontal={true}
+                dataSource={this.state.bestOfMarmara}
                 renderRow={(post) => this.eachPost(post)}
                 renderHeader={() => this.renderTitle("Best Of Marmara")}/>
-            <ListView 
+            <ListView
                 removeClippedSubviews={false}
-                horizontal={true} 
-                dataSource={this.state.mostUpvotedAllTimes} 
+                horizontal={true}
+                dataSource={this.state.mostUpvotedAllTimes}
                 renderRow={(post) => this.eachPost(post)}
                 renderHeader={() => this.renderTitle("Most 'Vecihi's All The Times")}/>
-            
-            <ListView 
+
+            <ListView
                 removeClippedSubviews={false}
-                horizontal={true} 
-                dataSource={this.state.mostUpvotedLastWeek} 
+                horizontal={true}
+                dataSource={this.state.mostUpvotedLastWeek}
                 renderRow={(post) => this.eachPost(post)}
                 renderHeader={() => this.renderTitle("Most 'Vecihi's Last Week")}/>
         </ScrollView>

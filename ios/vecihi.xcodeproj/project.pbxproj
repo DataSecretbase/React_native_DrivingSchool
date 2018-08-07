@@ -57,6 +57,9 @@
 		BCD80DC284FF4C28A3A42CC5 /* libRNImagePicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E6E65E4AE00349F9B0EC33F3 /* libRNImagePicker.a */; };
 		F4D75E267F19434894F7796F /* libRCTImageResizer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17B643EB77334651AA8E4B93 /* libRCTImageResizer.a */; };
 		A7AA85AF3FD94CD58B2289AC /* libRNFS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F89B06DACBF64CF293847083 /* libRNFS.a */; };
+		8ED455C210694C94AA3ED98A /* libCodePush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E297D973B0D54B8C91E02C6B /* libCodePush.a */; };
+		20D43B6B7A8A408DB6B50A1F /* libRNGLModelView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A07966A1D94C49D6999B9952 /* libRNGLModelView.a */; };
+		29AD8DDB6ED441CFA14D654E /* libLottieReactNative.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 34723E65C22E4BC7B71A1B36 /* libLottieReactNative.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -311,6 +314,12 @@
 		17B643EB77334651AA8E4B93 /* libRCTImageResizer.a */ = {isa = PBXFileReference; name = "libRCTImageResizer.a"; path = "libRCTImageResizer.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 		12380451097440C690677D2F /* RNFS.xcodeproj */ = {isa = PBXFileReference; name = "RNFS.xcodeproj"; path = "../node_modules/react-native-fs/RNFS.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		F89B06DACBF64CF293847083 /* libRNFS.a */ = {isa = PBXFileReference; name = "libRNFS.a"; path = "libRNFS.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		2FBE519451424C76BCDD7408 /* CodePush.xcodeproj */ = {isa = PBXFileReference; name = "CodePush.xcodeproj"; path = "../node_modules/react-native-code-push/ios/CodePush.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		E297D973B0D54B8C91E02C6B /* libCodePush.a */ = {isa = PBXFileReference; name = "libCodePush.a"; path = "libCodePush.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		1569E1B0D37848D98B198B4B /* RNGLModelView.xcodeproj */ = {isa = PBXFileReference; name = "RNGLModelView.xcodeproj"; path = "../node_modules/react-native-gl-model-view/ios/RNGLModelView.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		A07966A1D94C49D6999B9952 /* libRNGLModelView.a */ = {isa = PBXFileReference; name = "libRNGLModelView.a"; path = "libRNGLModelView.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		B99B023030DA4C3F80A17645 /* LottieReactNative.xcodeproj */ = {isa = PBXFileReference; name = "LottieReactNative.xcodeproj"; path = "../node_modules/lottie-react-native/src/ios/LottieReactNative.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		34723E65C22E4BC7B71A1B36 /* libLottieReactNative.a */ = {isa = PBXFileReference; name = "libLottieReactNative.a"; path = "libLottieReactNative.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -349,6 +358,9 @@
 				BCD80DC284FF4C28A3A42CC5 /* libRNImagePicker.a in Frameworks */,
 				F4D75E267F19434894F7796F /* libRCTImageResizer.a in Frameworks */,
 				A7AA85AF3FD94CD58B2289AC /* libRNFS.a in Frameworks */,
+				8ED455C210694C94AA3ED98A /* libCodePush.a in Frameworks */,
+				20D43B6B7A8A408DB6B50A1F /* libRNGLModelView.a in Frameworks */,
+				29AD8DDB6ED441CFA14D654E /* libLottieReactNative.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,6 +535,9 @@
 				3CC4E33ADBD846C58467C86B /* RNImagePicker.xcodeproj */,
 				A8FE6D23C89541A8BAA829CD /* RCTImageResizer.xcodeproj */,
 				12380451097440C690677D2F /* RNFS.xcodeproj */,
+				2FBE519451424C76BCDD7408 /* CodePush.xcodeproj */,
+				1569E1B0D37848D98B198B4B /* RNGLModelView.xcodeproj */,
+				B99B023030DA4C3F80A17645 /* LottieReactNative.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1120,6 +1135,9 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1129,6 +1147,9 @@
 					"$(SRCROOT)/../node_modules/react-native-image-picker/ios",
 					"$(SRCROOT)/../node_modules/react-native-image-resizer/ios/RCTImageResizer",
 					"$(SRCROOT)/../node_modules/react-native-fs/**",
+					"$(SRCROOT)\..\node_modules\react-native-code-push\ios\CodePush/**",
+					"$(SRCROOT)\..\node_modules\react-native-gl-model-view\ios",
+					"$(SRCROOT)\..\node_modules\lottie-react-native\src\ios\LottieReactNative",
 				);
 			};
 			name = Debug;
@@ -1155,6 +1176,9 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1164,6 +1188,9 @@
 					"$(SRCROOT)/../node_modules/react-native-image-picker/ios",
 					"$(SRCROOT)/../node_modules/react-native-image-resizer/ios/RCTImageResizer",
 					"$(SRCROOT)/../node_modules/react-native-fs/**",
+					"$(SRCROOT)\..\node_modules\react-native-code-push\ios\CodePush/**",
+					"$(SRCROOT)\..\node_modules\react-native-gl-model-view\ios",
+					"$(SRCROOT)\..\node_modules\lottie-react-native\src\ios\LottieReactNative",
 				);
 			};
 			name = Release;
@@ -1191,6 +1218,9 @@
 					"$(SRCROOT)/../node_modules/react-native-image-picker/ios",
 					"$(SRCROOT)/../node_modules/react-native-image-resizer/ios/RCTImageResizer",
 					"$(SRCROOT)/../node_modules/react-native-fs/**",
+					"$(SRCROOT)\..\node_modules\react-native-code-push\ios\CodePush/**",
+					"$(SRCROOT)\..\node_modules\react-native-gl-model-view\ios",
+					"$(SRCROOT)\..\node_modules\lottie-react-native\src\ios\LottieReactNative",
 				);
 			};
 			name = Debug;
@@ -1217,6 +1247,9 @@
 					"$(SRCROOT)/../node_modules/react-native-image-picker/ios",
 					"$(SRCROOT)/../node_modules/react-native-image-resizer/ios/RCTImageResizer",
 					"$(SRCROOT)/../node_modules/react-native-fs/**",
+					"$(SRCROOT)\..\node_modules\react-native-code-push\ios\CodePush/**",
+					"$(SRCROOT)\..\node_modules\react-native-gl-model-view\ios",
+					"$(SRCROOT)\..\node_modules\lottie-react-native\src\ios\LottieReactNative",
 				);
 			};
 			name = Release;
@@ -1252,6 +1285,9 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1261,6 +1297,9 @@
 					"$(SRCROOT)/../node_modules/react-native-image-picker/ios",
 					"$(SRCROOT)/../node_modules/react-native-image-resizer/ios/RCTImageResizer",
 					"$(SRCROOT)/../node_modules/react-native-fs/**",
+					"$(SRCROOT)\..\node_modules\react-native-code-push\ios\CodePush/**",
+					"$(SRCROOT)\..\node_modules\react-native-gl-model-view\ios",
+					"$(SRCROOT)\..\node_modules\lottie-react-native\src\ios\LottieReactNative",
 				);
 			};
 			name = Debug;
@@ -1296,6 +1335,9 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1305,6 +1347,9 @@
 					"$(SRCROOT)/../node_modules/react-native-image-picker/ios",
 					"$(SRCROOT)/../node_modules/react-native-image-resizer/ios/RCTImageResizer",
 					"$(SRCROOT)/../node_modules/react-native-fs/**",
+					"$(SRCROOT)\..\node_modules\react-native-code-push\ios\CodePush/**",
+					"$(SRCROOT)\..\node_modules\react-native-gl-model-view\ios",
+					"$(SRCROOT)\..\node_modules\lottie-react-native\src\ios\LottieReactNative",
 				);
 			};
 			name = Release;
@@ -1335,6 +1380,9 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 			};
 			name = Debug;
@@ -1359,6 +1407,9 @@
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",

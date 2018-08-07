@@ -74,7 +74,7 @@ export default class SearchResult extends Component{
       </TouchableOpacity>
       <View style={{flex:1}}>
          <Text style={{fontSize:20, color: 'black'}}>
-             Results
+             搜索结果
          </Text>
       </View>
       <View style={{flex:1}}>

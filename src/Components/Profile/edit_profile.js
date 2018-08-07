@@ -94,10 +94,10 @@ export default class EditProfile extends Component {
   nav(){
     return(<View style={{height:60, flexDirection:'row', paddingLeft:10, paddingRight:10, paddingTop:10, alignItems:'center', justifyContent:'space-between', borderBottomWidth:1, borderBottomColor:'#e7e7e7'}}>
       <TouchableOpacity onPress={() => Actions.profile()}>
-         <Text style={{fontWeight:'600', fontSize:16, paddingRight: 15}}>Back</Text>
+         <Text style={{fontWeight:'600', fontSize:16, paddingRight: 15}}>返回</Text>
       </TouchableOpacity>
-      
-      <Text style={{fontWeight:'600', fontSize:16}}>Edit Profile</Text>
+
+      <Text style={{fontWeight:'600', fontSize:16}}>修改个人资料</Text>
       </View>)
   }
 
@@ -108,7 +108,7 @@ export default class EditProfile extends Component {
         onStartShouldSetResponder={ (e) => true}
         onResponderRelease={ (e) => Keyboard.dismiss()}
         style={styles.screen}>
-        {this.state.loading 
+        {this.state.loading
           ?
             <ActivityIndicator size='large' color='#0000ff' />
           :
@@ -128,21 +128,21 @@ export default class EditProfile extends Component {
                           />
                         </PhotoUpload>
 
-                    <RkTextInput 
+                    <RkTextInput
                         onChangeText={(firstName) => this.setState({firstName: firstName})}
-                        rkType='form' 
+                        rkType='form'
                         defaultValue={this.state.firstName}
-                        placeholder='First Name'
+                        placeholder='姓名'
                         underlineColorAndroid="transparent"
                         autoCorrect={false}
                         autoCapitalize="words"
                         placeholderTextColor="white"
                         blurOnSubmit={true}
                         keyboardAppearance="default"/>
-                    <RkTextInput 
+                    <RkTextInput
                         onChangeText={(lastName) => this.setState({lastName: lastName})}
-                        rkType='form' 
-                        placeholder='Last Name'
+                        rkType='form'
+                        placeholder='昵称'
                         defaultValue={this.state.lastName}
                         underlineColorAndroid="transparent"
                         autoCorrect={false}
@@ -151,10 +151,10 @@ export default class EditProfile extends Component {
                         blurOnSubmit={true}
                         keyboardAppearance="default"/>
 
-                    <RkTextInput 
+                    <RkTextInput
                         onChangeText={(bio) => this.setState({bio: bio})}
-                        rkType='form' 
-                        placeholder='Bio' 
+                        rkType='form'
+                        placeholder='地址'
                         defaultValue={this.state.bio}
                         underlineColorAndroid="transparent"
                         autoCorrect={false}
@@ -165,10 +165,10 @@ export default class EditProfile extends Component {
                         keyboardAppearance="default"/>
                     <TouchableOpacity onPress={this.updateProfile.bind(this) } style={styles.save}>
                       <Text style={styles.loginText}>
-                          Update
+                          修改
                       </Text>
                     </TouchableOpacity>
-          
+
 
                   </View>
                 </ScrollView>

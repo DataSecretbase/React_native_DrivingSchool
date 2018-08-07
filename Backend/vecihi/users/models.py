@@ -59,7 +59,7 @@ class AccountManager(BaseUserManager):
         return self._create_user(email, username, password, major, image, False, False,
                                  **extra_fields)
 
-    def create_superuser(self, email, username, password, major, image=None, **extra_fields):
+    def create_superuser(self, email, username, password, major="Unkown", image=None, **extra_fields):
         return self._create_user(email, username, password, major, image, True, True,
                                  **extra_fields)
 

@@ -75,7 +75,7 @@ export default class Following extends Component{
       </TouchableOpacity>
       <View style={{flex:1}}>
          <Text style={{fontSize:20, color: 'black'}}>
-             Following
+             关注
          </Text>
       </View>
       <View style={{flex:1}}>

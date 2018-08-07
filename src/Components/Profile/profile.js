@@ -144,18 +144,18 @@ export default class Profile extends Component {
     return(<View style={{flex:2, margin:15, marginBottom:5, flexDirection:'row', justifyContent:'space-around'}}>
       <View style={{alignItems:"center", margin:15, justifyContent:'center'}}>
         <Text style={{fontWeight:'400', fontSize:18}}>{this.state.info.totalPosts}</Text>
-        <Text style={{color:"#888", fontSize:13}}>posts</Text>
+        <Text style={{color:"#888", fontSize:13}}>文章</Text>
       </View>
       <TouchableHighlight onPress={() => Actions.followers({'user_id': this.state.id})}>
         <View style={{alignItems:"center", margin:15, justifyContent:'center'}}>
           <Text style={{fontWeight:'400', fontSize:18}}>{this.state.info.followers}</Text>
-          <Text style={{color:"#888", fontSize:13}}>followers</Text>
+          <Text style={{color:"#888", fontSize:13}}>粉丝</Text>
         </View>
       </TouchableHighlight>
       <TouchableHighlight onPress={() => Actions.following({'user_id': this.state.id})}>
         <View style={{alignItems:"center", margin:15, justifyContent:'center'}}>
           <Text style={{fontWeight:'400', fontSize:18}}>{this.state.info.following}</Text>
-          <Text style={{color:"#888", fontSize:13}}>following</Text>
+          <Text style={{color:"#888", fontSize:13}}>关注</Text>
         </View>
       </TouchableHighlight>
 
@@ -175,7 +175,7 @@ export default class Profile extends Component {
               {this.metrics()}
             <View style={{flex:2, alignItems:'center'}}>
               <TouchableHighlight onPress={() => this.signOut()} style={{width:240, height:30, margin:5, borderColor:'#ddd', borderRadius:4, borderWidth:1, alignItems:"center", justifyContent:'center'}}>
-                  <Text style={{fontWeight:'600', color:'#333'}}>Sign Out</Text>
+                  <Text style={{fontWeight:'600', color:'#333'}}>注销</Text>
               </TouchableHighlight>
             </View>
           </View>
@@ -233,7 +233,7 @@ export default class Profile extends Component {
 
   nav(){
     return(<View style={{height:60, flexDirection:'row', paddingLeft:10, paddingRight:10, paddingTop:10, alignItems:'center',justifyContent:'space-between', borderBottomWidth:1, borderBottomColor:'#e7e7e7'}}>
-        <TouchableOpacity onPress={() => alert("I'm working on it\n Yasin Toy ")}>
+        <TouchableOpacity onPress={() => alert("我正在努力\n Yasin Toy ")}>
            <Icon name="ios-person-add" size={20} />
         </TouchableOpacity>
       <Text style={{fontWeight:'600', fontSize:16}}>{this.state.info.fullName}</Text>
@@ -254,7 +254,7 @@ export default class Profile extends Component {
               <ActivityIndicator size="large" color="#0000ff" />
           :
               <View style={{flex:5}}>
-                
+
                   <ListView
                   enableEmptySections={true}
                   removeClippedSubviews={false}

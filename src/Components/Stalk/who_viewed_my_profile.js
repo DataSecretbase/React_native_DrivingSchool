@@ -70,11 +70,11 @@ export default class WhoViewedMyProfile extends Component{
    return(
     <View style={styles.nav1}>
       <TouchableOpacity onPress={() => {}} style={{flex:1, alignItems:'flex-start', justifyContent:"center"}}>
-          
+
       </TouchableOpacity>
       <View style={{flex:1}}>
          <Text style={{fontSize:20, color: 'black'}}>
-             Your Stalkers
+             你的访客记录
          </Text>
       </View>
       <View style={{flex:1}}>

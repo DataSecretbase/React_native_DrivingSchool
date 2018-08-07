@@ -93,7 +93,7 @@ export default class SignUp extends Component {
                 "Content-Type": "application/json",
             }
           }
-          
+
           response = await fetch(url, data)
           let res = await response.json()
           if(response.status >= 200 && response.status <= 300){
@@ -137,17 +137,17 @@ export default class SignUp extends Component {
         onResponderRelease={ (e) => Keyboard.dismiss()}
         style={styles.screen}>
         {image}
-        {this.state.loading 
+        {this.state.loading
           ?
             <ActivityIndicator size='large' color='#0000ff' />
           :
               <ScrollView>
                           <View style={styles.container}>
-          
-                    <RkTextInput 
+
+                    <RkTextInput
                         onChangeText={(email) => this.setState({email: email})}
-                        rkType='rounded' 
-                        placeholder='Email'
+                        rkType='rounded'
+                        placeholder='电子邮箱'
                         underlineColorAndroid="transparent"
                         autoCorrect={false}
                         autoCapitalize="none"
@@ -155,30 +155,30 @@ export default class SignUp extends Component {
                         blurOnSubmit={true}
                         keyboardType="email-address"
                         keyboardAppearance="default"/>
-                    <RkTextInput 
+                    <RkTextInput
                         onChangeText={(username) => this.setState({username: username})}
-                        rkType='rounded' 
-                        placeholder='Username'
+                        rkType='rounded'
+                        placeholder='用户名'
                         underlineColorAndroid="transparent"
                         autoCorrect={false}
                         autoCapitalize="none"
                         placeholderTextColor="white"
                         blurOnSubmit={true}
                         keyboardAppearance="default"/>
-    
+
 
 
                         <ModalDropdown style={styles.major} onSelect={(index, value) => this.setState({major: value})} options={MAJORS}>
-                            <View style={{flex:1, justifyContent:'center', width:width-50, height: 50}}> 
+                            <View style={{flex:1, justifyContent:'center', width:width-50, height: 50}}>
                                 <Text style={{color:'gray'}}> {this.state.major} </Text>
                             </View>
                         </ModalDropdown>
 
 
-                    <RkTextInput 
+                    <RkTextInput
                         onChangeText={(password) => this.setState({password: password})}
-                        rkType='rounded' 
-                        placeholder='Password' 
+                        rkType='rounded'
+                        placeholder='密码'
                         secureTextEntry={true}
                         underlineColorAndroid="transparent"
                         autoCorrect={false}
@@ -186,10 +186,10 @@ export default class SignUp extends Component {
                         placeholderTextColor="white"
                         blurOnSubmit={true}
                         keyboardAppearance="default"/>
-                    <RkTextInput 
+                    <RkTextInput
                         onChangeText={(confirm_password) => this.setState({confirmPassword: confirm_password})}
-                        rkType='rounded' 
-                        placeholder='Confirm Password' 
+                        rkType='rounded'
+                        placeholder='重复密码'
                         secureTextEntry={true}
                         underlineColorAndroid="transparent"
                         autoCorrect={false}
@@ -202,10 +202,10 @@ export default class SignUp extends Component {
                           sign up
                       </Text>
                     </TouchableOpacity>
-          
+
                     <View style={styles.footer}>
                       <View style={styles.textRow}>
-                        <RkText rkType='primary3'>Do have already an account?</RkText>
+                        <RkText rkType='primary3'>已经有账户?</RkText>
                         <RkButton rkType='clear'>
                           <RkText rkType='header6' onPress={() => Actions.login()}> Login
                             now </RkText>
@@ -262,16 +262,16 @@ let styles = RkStyleSheet.create(theme => ({
     flexDirection: 'row',
   },
   major: {
-    flex:1, 
+    flex:1,
     flexDirection:'row',
     alignItems:'center',
-    height: 50, 
-    width:width-40, 
-    backgroundColor: 'transparent', 
-    color: 'gray', 
-    borderWidth:0.3, 
-    borderBottomColor:'gray', 
-    paddingHorizontal: 10, 
+    height: 50,
+    width:width-40,
+    backgroundColor: 'transparent',
+    color: 'gray',
+    borderWidth:0.3,
+    borderBottomColor:'gray',
+    paddingHorizontal: 10,
     borderRadius:25
   }
 }));
